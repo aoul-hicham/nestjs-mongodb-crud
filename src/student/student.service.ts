@@ -16,13 +16,13 @@ export class StudentService {
   }
 
   // Update Student
-  async updateSTudent(studentId: number, student: UpdateStudentDTO) {
+  async updateStudent(studentId: number, student: UpdateStudentDTO) {
     const existingStudent = await this.studentModel.findByIdAndUpdate(studentId, student, {
       new: true,
     });
 
     if (!existingStudent)
-      throw new NotFoundException(['Yuu are trying to update a non existing student  !']);
+      throw new NotFoundException(['You are trying to update a non existing student  !']);
 
     return existingStudent;
   }
