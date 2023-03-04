@@ -1,5 +1,4 @@
-import { IsString } from 'class-validator';
-import { IsNotEmpty, IsNumber, MaxLength } from 'class-validator/types/decorator/decorators';
+import { IsString, IsNotEmpty, IsNumber, MaxLength } from 'class-validator';
 
 export class CreateStudentDTO {
   @IsString()
